@@ -1,0 +1,57 @@
+1. comment
+	% 
+
+2. *disp*
+	just display...
+
+3. Variables
+	3.1) MATLAB is a weakly typed language
+		no need to initialize variables, and variables can be change to any
+		type without redefine./
+
+		Typically, MATLAB has the following types:
+			- vectors
+			- matrices
+				-- both of chars or doubles
+		And some other types:
+			- complex, symbolic, 16-bits and 8-bits integers
+	
+	3.2) Built-in variables
+		NEVER use them.
+		- *i* and *j* indicates complex numbers
+		- *pi*
+		- ans
+		- Inf and -Inf
+		- NaN
+	
+	3.3) Vector
+		size(), length()
+	3.x)
+		save file var var ...
+		clear var var
+		load file
+		% can also save all
+		save myenv; clear all; load myenc;
+
+
+4. travel between directories
+	cd, ls.....
+
+-----------------------------------------------------
+For assignment
+- logspace
+	+ Return a row vector with N elements logarithmically spaced from 10^A to 10^B
+- ones & zeros & diag & reshape & nan
+- floor & cell
+- rand & randi
+- sqrt &  log
+- real & imag & conj
+	+ real: real part
+	+ imag: imaginary part
+	+ conj: conjunction (共軛) 
+
+- sum & mean
+- find
+- cumsum
+
+

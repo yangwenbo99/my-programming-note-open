@@ -1,0 +1,106 @@
+1. function
+	functions also store in ".m" files, the only differences between functions
+	and script is that functions have function declaration.
+
+	% this is help file of the function
+	% here, the usage of the function should be stated
+	% and provides some extra usful information
+	function [this, is, output] = function_name(inputs)
+
+	NOTE: 
+		a. Function name must match file name
+		b. *function* must be used
+		c. Inputs must be specified
+		d. If return more than one vars, brackets must be used
+		e. MATLAB will return the vars whose name match the definition
+		f. Any variables created within the function but not returned disappear after the function stops running
+	
+2. logical operations
+	2.1) 
+		"not equal" is ~=, but not !=
+	2.2) logical operators
+		+-----------+-------------+--------------+
+		|           |             | short-circuit|
+		| Name      | Elementwise |(only scalars)|
+		+----------------------------------------+
+		| and       | &           | &&           |
+		| or        | |           | ||           |
+		| not       | ~           |              |
+		| xor       | xor         |              |
+		| all true  | all         |              |
+		| any true  | any         |              |
+		+-----------+-------------+--------------+
+
+3. Flow control
+	Since studied, skip this.
+
+4. Plot
+	4.1) Line plot
+		since studied, only briefly review......
+		plot()
+			doc line_props
+		semilogx(x, y, '');		% same as plot, but the x-axis will be loged 
+		similogy(x, y, '');
+		loglog(x, y, '');
+
+	4.2) 3D plot
+		plot3();
+		xlim, ylim, zlim
+		
+		4.2.1) axis modes
+			axis square
+				makes the current axis look like a box
+			axis tight
+				fits axis to data
+			axis equal
+				x and y scale the same
+			axis xy
+			axis ij
+
+			also, other information can be sent to axis,
+			for example, limits of axies...
+
+		4.2.2) multiple plots
+			subplot(2, 3, 1)
+				// make the plot window 2(r) * 3(c) and active the first one
+			subplot(2, 3, 1:3)
+			close([1 3])
+			close all;
+
+		4.2.3) colormap
+			use *imagesc(mat);* to generate image, and use *colormap* to
+			chose color map, 
+
+			"The colormap should be an N row by 3 column matrix. The columns
+			contain red, green, and blue intensities respectively. All
+			entries must be between 0 and 1 inclusive. The new colormap is
+			returned."
+		
+		4.2.4) surface
+			use loop or meshgrid() to generate x and y matrix
+			use *surf()* or *mesh()* to plot
+			use *shading* to change its look
+				- shading facted
+				- shading flat
+				- shading interp
+
+		4.3.5)
+			contour(X, Y, Z, [n]);
+	
+	4.3) specialized plotting functions
+		polar(X, Y)
+		bar(X, Y)
+		quiver(X, Y, vX, vY); 		% draw a victor field...
+		stairs-plot piecewise constant functions
+		fill						% polygon
+
+		4.2.5) use *contour*(等高線) to plot 2-variable function in a plane
+
+5. find
+	inds = find(x>0.4 & x<0.6);
+	
+
+-----------------------------
+Assignment
+- conv
+- interp1 interp2 interp3

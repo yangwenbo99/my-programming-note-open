@@ -1,0 +1,64 @@
+0. Recall HW2
+	*min* is for finding the minimum value for vector or to find minimum
+	value of each column in a matrix.
+	so, to find the minimum of a matrix,
+		m = min(min(a));
+		m = min(a(:));
+1. Linear Algebra
+	Let A be the coefficient matrix, and b be the argument, to solve it
+	and get a least squares solution, just:
+		x = A\b;
+	However, if it has more than one, then only one will be given.
+
+	1.1) other function
+		rand(A);
+		det(A);
+		inv(A);			% or just A^-1
+		eig(X);			% eigenvalue of X, and optionally getting
+		% eigenvectors
+		svd(X);			% singular value decomposition
+		qr(X);			% QR decomposition
+
+2. Polynomials
+	P = [1 0 -2] represents x^2 - 2;
+	r = roots(P); 		% get roots from polynomial
+	P = poly(r);
+	y0 = polyval(P, x0);% evaluate a polynomial at a point 
+	y = polyval(P, y);	% evaluate a polynomial at many points
+	P2 = polyfit(x, y, 2)
+
+3. Optimization
+	3.1) zero, minimum
+		fzero('function_name', x0);
+		fzero(@function_name, x0);
+		x = fminbnd('my_fun', -xs, xe);		% [xs, xe]
+		x = fminsearch('my_fun", x0);		% find a local minimum
+	
+	3.2) Anonymous Function
+		x = fzero(@(x) (cos(exp(x))), 1);
+		            ^   ^         ^
+		            |   |function |
+		          input |  body   |
+		                +---------+
+	
+	3.3) calculus
+		https://www.mathworks.com/help/matlab/numerical-integration-and-differentiation.html
+		diff(y)			% really "differentiate"
+		der_y_x  = diff(y) / diff(x)
+		gradient can also be used
+
+		traps, cmptrapz, quad(deprecated) and integral
+
+4. ODE (Ordinary differential equation) solver
+	ode23, ode45, ode15s etc.
+	odeset
+	for higher order, special technique can be used to transform it into
+	first order equation.
+
+--------------------------
+extra 
+	randn();			% random noise (normal distribution)
+	polyfit
+
+
+

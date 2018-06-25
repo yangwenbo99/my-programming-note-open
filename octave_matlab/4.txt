@@ -1,0 +1,70 @@
+1. Probability and statistics
+	histogram
+	hist
+	histc
+
+	rand()					% uniform distribution
+	randn					% normal distribution
+
+2. Data structure
+	2.1) Cell array...
+		everything the same, except using braces rather brackets or
+		parenthesis.
+	2.2) structure
+		TO create a structure, use one of these syntax:
+			s = struct
+			s = struct(field,value)
+			s = struct(field1,value1,...,fieldN,valueN)
+			s = struct([])
+			s = struct(obj)
+			s.a = 1;
+
+		2.2.1) structure arrays
+			ppl=struct('name',{'John','Mary','Leo'},...  'age',{32,27,18},'childAge',{[2;4],1,[]});
+			then, we can
+				person = ppl(2);
+				person.name
+
+3. Images and Animation
+	3.1) Figure Handles
+		L = plot(...);		% handles of currently plotted line
+		A = gca;			% handles of current axis
+		F = gcf;			% handles of current figure
+		
+		get(L);
+		get(L, 'YData');
+		L.YData;
+		set(L, 'LineWidth', 1.5);
+		L=LineWidth = 3;
+	3.2) movie
+		(imagesc)
+		pause();
+		drawnow();
+		M(idx) = getframe;
+		movie();
+		movie2avi();
+		also can use 
+		(width, height, color, framecount) as information for gif file
+		and use imwrite
+		getframe
+		frame2im
+		imwrite
+
+4. Performance
+	>> tic			% zero the timer
+	>> toc			% current time, in seconds
+
+	>> profile on
+	>> profile viewer
+
+x) OOP
+	"Object-Oriented Programming"
+
+----------------------
+- cumsum
+- xlim, ylim
+- grid
+- xlabel, ylabel
+
+- imread, meshgrid, interp2, unit8, image, axis, equal, axis tight
+
