@@ -205,10 +205,24 @@ And it also support email! <yangwenbo99@gmail.com>
 Single `*` or `_` will be treated as `<em>`, and double will be treated as 
 `<strong>`.
 
-## code ##
+## Code ##
 
 To indicate a span of code, `wrap it with backtick quotes` (\`)
 ``To include multiple backtick quote in a code span, use multiple ` ``
+
+
+    Indent to write code
+
+```
+Or use ``` for code blocks
+```
+
+```c
+// optionally, you can add language abbreviation after ``` for highlight
+int main (void) {
+    return 0;
+}
+```
 
 ## Images ##
 
